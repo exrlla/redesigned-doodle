@@ -10,10 +10,33 @@
     <style>
       body {
         margin: 0;
+        overflow: hidden; /* Prevent scrollbars */
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      #canvas-container {
+        height: 100%;
+        position: relative;
+      }
+
+      p {
+        position: absolute;
+        top: 50%; /* Position vertically in the middle */
+        right: 0; /* Position on the right edge */
+        padding-right: 15em;
+        transform: translate(0, -50%); /* Center vertically */
+        font-family: sans-serif;
+        font-size: 1.5em;
+        color: #333;
       }
     </style>
   </head>
   <body>
     <script type="module" src="/main.js"></script>
+    <div id="canvas-container">
+      <canvas></canvas>
+      <p>Touch the Shiba Inu!</p>
+    </div>
   </body>
 </html>
